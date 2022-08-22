@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: It spent 6.302s to run reversed50000.txt, 8.067s to run random50000.txt and 1.942 to run sorted50000.txt. It takes less amount of time when running sorted texts compared to sort3.
+
+sort2 uses: Merge Sort
+
+How do you know?: It spent 0.891s to run reversed50000.txt, 0.692s to run random50000.txt and 0.765 to run sorted50000.txt. It is the fastest algorithm of the test.
+
+sort3 uses: Selection Sort
+
+How do you know?: It spent 3.295s to run reversed50000.txt, 3.406s to run random50000.txt and 3.683 to run sorted50000.txt. It takes a lot of time to run even running on sorted text.

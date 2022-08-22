@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(){
+                let correct_btn = document.querySelector("#correct");
+                let incorrect_btn = document.querySelectorAll(".incorrect");
+                let message = document.querySelector("#message");
+                
+                let freebutton = document.querySelector("#free-button");
+                let freemessage = document.querySelector("#free-message");
+                
+                freebutton.addEventListener("click", function(){
+                    let freeanswer = document.querySelector("input");
+                    if (freeanswer.value == "Brazil" || freeanswer.value == "brazil") {
+                        freeanswer.style.color = "green";
+                        freemessage.innerHTML = "Correct!";
+                    }
+                    else {
+                        freeanswer.style.color = "red";
+                        freemessage.innerHTML = "Incorrect";
+                    }
+
+                });
+
+                correct_btn.addEventListener("click", function(){
+                    correct_btn.style.backgroundColor = "green";
+                    message.innerHTML = "Correct!";
+                });
+                
+                for (let i = 0; i < incorrect_btn.length; i++) {
+                    incorrect_btn[i].addEventListener("click", function(){
+                        incorrect_btn[i].style.backgroundColor = "red"
+                        message.innerHTML = "Incorrect";
+                    });
+                }
+            });
+
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>How much world Cups has Brazil won? </h3>
+                <button class = "incorrect">2 times</button>
+                <button class = "incorrect">3 times</button>
+                <button class = "incorrect">4 times</button>
+                <button id = "correct">5 times</button>
+                <button class = "incorrect">6 times</button>
+
+                <p id = "message"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What country has won the most World Cups?</h3>
+                <input type = "text">
+                <button id = "free-button">Check Answer</button>
+                <p id = "free-message"></p>
+            </div>
+        </div>
+    </body>
+</html>
