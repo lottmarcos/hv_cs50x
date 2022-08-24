@@ -8,6 +8,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link href="styles.css" rel="stylesheet">
     <title>My Webpage</title>
+
+    <script>
+        function blink() {
+            let arrow = document.querySelector("#love");
+            if (arrow.style.visibility == 'hidden') {
+                arrow.style.visibility = 'visible';
+            }    
+            else {
+                arrow.style.visibility = 'hidden'
+            }
+        }
+        window.setInterval(blink, 600);
+    </script>
 </head>
 
 <body>
@@ -31,15 +44,19 @@
     <div class="container">
         <div class="card border-0 shadow my-5">
             <div class="card-body p-5">
-                <h1 style="height: 200px" class="font-weight-light"> get to know lottmarcos!!</h1>
-                <p class="lead">want to know more about lottmarcos?</p>
-                <p class="lead">explore this website made for cs50x and get to know me!</p>
+                <h1 style="height: 60px" class="font-weight-light">surprise!!</h1>
+                <img src="minhoca.jpg" width="280" height="300" class="rounded float-start">
+                <img src="minhoca2.jpeg" width="280" height="300"  class="rounded float-end">
                 
+                <h5 style="height: 85px" class="text-center"> </h5>
+                <h5 class="text-center">this is minhoca!</h5>
+                <h5 class="text-center">she´s my girlfriend´s cat</h5>
+                <h5 class="text-center" id="love">and I love her! :)</h5>
+                   
+                </div>
             </div>
         </div>
     </div>
-
-
 
     <div class="fixed-bottom">
         <footer class="container-fluid">
